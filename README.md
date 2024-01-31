@@ -1,1 +1,1 @@
-Here we collect ome experimental codes/notebooks to explore the use of regularized priors in recoverying linear PDEs.
+Here we collect some experimental codes/notebooks to explore the use of regularized Gaussian priors in recovering linear PDEs.
