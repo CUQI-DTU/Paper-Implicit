@@ -1,10 +1,6 @@
 import os
 import time
 
-  
-def tag(experiment):
-    tag_string = f"{experiment[0]}_domain_N{experiment[1]}_O{experiment[3]}"
-    return tag_string
 
 def submit(jobid,cmd, ncores=1):
     id = str(jobid)
@@ -38,10 +34,18 @@ def submit(jobid,cmd, ncores=1):
     os.system('bsub < ' + jobscript)
 
 if __name__ == "__main__":
-    cmd = 'jupyter nbconvert --execute --to notebook intro_example_Poisson_2D_long.ipynb --output intro_example_Poisson_2D_long_cpy2_2.ipynb'
-    timestr = time.strftime("%Y%m%d_%H%M%S")
-    print(timestr)
-    tag = 'myula_'+timestr
-    print(cmd)
-    print(tag)
-    submit(tag, cmd)
+    smoothing_factor_list = [0.005, 0.01, 0.02]
+    regularization_strength_list = [10, 20, 30]
+    par_dim_list = [int(16**2), int(32**2), int(64**2)]
+
+    idx = 0
+    for smoothing_factor in smoothing_factor_list:
+        for regularization_strength in regularization_strength_list:
+            for par_dim in par_dim_list:
+                idx += 1
+                cmd = "NB_ARGS='--smoothing_factor 0.1 --regularization_strength 10 --par_dim 10' jupyter nbconvert --execute --to notebook Poisson_2D_MYULA.ipynb --output Poisson_2D_MYULA0.1_10_100.ipynb"
+                cmd = f"NB_ARGS{idx}='--smoothing_factor {smoothing_factor} --regularization_strength {regularization_strength} --par_dim {par_dim}' jupyter nbconvert --execute --to notebook Poisson_2D_MYULA.ipynb --output Poisson_2D_MYULA{smoothing_factor}_{regularization_strength}_{par_dim}.ipynb"
+                tag = "Poisson_2D_MYULA"+str(idx)+"_" + str(smoothing_factor) + "_" + str(regularization_strength) + "_" + str(par_dim)
+                print(cmd)
+                print(tag)
+                submit(tag, cmd)
