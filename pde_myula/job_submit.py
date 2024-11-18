@@ -43,8 +43,7 @@ if __name__ == "__main__":
         for regularization_strength in regularization_strength_list:
             for par_dim in par_dim_list:
                 idx += 1
-                cmd = "NB_ARGS='--smoothing_factor 0.1 --regularization_strength 10 --par_dim 10' jupyter nbconvert --execute --to notebook Poisson_2D_MYULA.ipynb --output Poisson_2D_MYULA0.1_10_100.ipynb"
-                cmd = f"NB_ARGS{idx}='--smoothing_factor {smoothing_factor} --regularization_strength {regularization_strength} --par_dim {par_dim}' jupyter nbconvert --execute --to notebook Poisson_2D_MYULA.ipynb --output Poisson_2D_MYULA{smoothing_factor}_{regularization_strength}_{par_dim}.ipynb"
+                cmd = f"NB_ARGS=' --smoothing_factor {smoothing_factor} --regularization_strength {regularization_strength} --par_dim {par_dim}' jupyter nbconvert --execute --to notebook Poisson_2D_MYULA.ipynb --output Poisson_2D_MYULA{smoothing_factor}_{regularization_strength}_{par_dim}.ipynb"
                 tag = "Poisson_2D_MYULA"+str(idx)+"_" + str(smoothing_factor) + "_" + str(regularization_strength) + "_" + str(par_dim)
                 print(cmd)
                 print(tag)
