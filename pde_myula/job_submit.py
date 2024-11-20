@@ -34,9 +34,9 @@ def submit(jobid,cmd, ncores=1):
     os.system('bsub < ' + jobscript)
 
 if __name__ == "__main__":
-    smoothing_factor_list = [0.005, 0.01, 0.02]
-    regularization_strength_list = [10, 20, 30]
-    par_dim_list = [int(16**2), int(32**2), int(64**2)]
+    smoothing_factor_list = [0.0001, 0.001, 0.01, 0.1, 1]
+    regularization_strength_list = [1, 5, 10, 20, 30]
+    par_dim_list = [int(32**2)]
 
     idx = 0
     for smoothing_factor in smoothing_factor_list:
