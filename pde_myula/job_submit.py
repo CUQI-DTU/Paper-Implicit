@@ -6,7 +6,6 @@ def submit(jobid,cmd, ncores=1):
     id = str(jobid)
     jobname = 'job_' + id
     memcore = 10000
-    maxmem = 8000
     email = 'amaal@dtu.dk'
     block_size = ncores if ncores <=24 else 24
  
