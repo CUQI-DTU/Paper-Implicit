@@ -33,8 +33,8 @@ def submit(jobid,cmd, ncores=1):
     os.system('bsub < ' + jobscript)
 
 if __name__ == "__main__":
-    smoothing_factor_list = [0.0001, 0.001, 0.01, 0.1, 1]
-    regularization_strength_list = [1, 5, 10, 20, 30]
+    smoothing_factor_list = [0.0001, 0.001, 0.01, 0.1, 1, 10]
+    regularization_strength_list = [1, 5, 7, 10, 20, 30]
     par_dim_list = [int(32**2)]
 
     idx = 0
