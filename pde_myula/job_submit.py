@@ -33,17 +33,16 @@ def submit(jobid,cmd, ncores=1):
     os.system('bsub < ' + jobscript)
 
 if __name__ == "__main__":
-    smoothing_factor_list = [0.0001, 0.001, 0.01, 0.1, 1, 10]
-    regularization_strength_list = [1, 5, 7, 10, 20, 30]
+
+    restoration_strength_factor_list = [1, 5, 7, 10, 20, 30]
     par_dim_list = [int(32**2)]
 
     idx = 0
-    for smoothing_factor in smoothing_factor_list:
-        for regularization_strength in regularization_strength_list:
+    for restoration_strength_factor in restoration_strength_factor_list:
             for par_dim in par_dim_list:
                 idx += 1
-                cmd = f"NB_ARGS=' --smoothing_factor {smoothing_factor} --regularization_strength {regularization_strength} --par_dim {par_dim}' jupyter nbconvert --execute --to notebook Poisson_2D_MYULA.ipynb --output Poisson_2D_MYULA{smoothing_factor}_{regularization_strength}_{par_dim}.ipynb"
-                tag = "Poisson_2D_MYULA"+str(idx)+"_" + str(smoothing_factor) + "_" + str(regularization_strength) + "_" + str(par_dim)
+                cmd = f"NB_ARGS=' --restoration_strength_factor {restoration_strength_factor}  --par_dim {par_dim}' jupyter nbconvert --execute --to notebook Poisson_2D_MYULA.ipynb --output Poisson_2D_MYULA_{restoration_strength_factor}_{par_dim}.ipynb"
+                tag = "Poisson_2D_MYULA"+str(idx)+"_" + str(restoration_strength_factor) + "_" + str(par_dim)
                 print(cmd)
                 print(tag)
                 submit(tag, cmd)
