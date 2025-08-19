@@ -3,7 +3,7 @@
 #### [arXiv to-be-filled](https://arxiv.org/abs/xxxx)
 
 ## Introduction
-We present a computational framework for incorporating implicit priors for Bayesian inverse problems with [CUQIpy](https://github.com/CUQI-DTU/CUQIpy).
+We present a computational framework for incorporating implicit priors for Bayesian inverse problems with [CUQIpy](https://github.com/CUQI-DTU/CUQIpy). This repository contains supplementary materials to our manuscript.
 
 ## Pedagogical examples
 - [Simplest linear Bayesian inverse problem](simplest_linear/simplest_linear.ipynb)
