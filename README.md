@@ -1,9 +1,18 @@
-Here we collect some experimental codes/notebooks to explore the use of regularized/implicit priors.
+# A computational framework and implementation for implicit priors in Bayesian inverse problems
 
-## Regularized linear RTO
-- [x] source of 1D Poisson
-- [x] boundary of 2D Poisson
+#### [arXiv to-be-filled](https://arxiv.org/abs/xxxx)
 
- ## MYULA
- - [x] simplest nonlinear problem
- - [x] conductivity of 2D Poisson
+## Introduction
+We present a computational framework for incorporating implicit priors for Bayesian inverse problems within the CUQIpy framework.
+
+## Pedagogical examples
+- [Simplest linear Bayesian inverse problem]()
+- [Simplest nonlinear Bayesian inverse problem]()
+
+## Application case studies
+- [Deblurring with constraints]()
+- Various inverse problems with the Poisson equation
+  - [source term]()
+  - [Boundary value]()
+  - [Conductivity]()
+- [Image inpainting]()
