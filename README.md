@@ -2,9 +2,7 @@
 
 #### [arXiv to-be-filled](https://arxiv.org/abs/xxxx)
 
-## Introduction
 This repository contains supplementary materials to our manuscript.
-
 
 ## Notebooks
 ### Pedagogical examples
