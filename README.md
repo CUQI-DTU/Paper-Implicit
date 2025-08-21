@@ -6,13 +6,13 @@ This repository contains supplementary materials to our manuscript.
 
 ## Notebooks
 ### Pedagogical examples
-- [Simplest linear Bayesian inverse problem](simplest_linear/simplest_linear.ipynb), RLRTO
-- [Simplest nonlinear Bayesian inverse problem](simplest_nonlinear/simplest_nonlinear.ipynb), Langevin
+- [Simplest linear Bayesian inverse problem (Section 4.2-4.4)](simplest_linear/simplest_linear.ipynb), RLRTO
+- [Simplest nonlinear Bayesian inverse problem (Section 4.5)](simplest_nonlinear/simplest_nonlinear.ipynb), Langevin
 
 ### Application case studies
-- [Deblurring with constraints](showcase_regularizedGaussian/showcase_regGauss.ipynb), RLRTO
-- Various inverse problems with the Poisson equation
+- [Deblurring with constraints (Section 5.1)](showcase_regularizedGaussian/showcase_regGauss.ipynb), RLRTO
+- Various inverse problems with the Poisson equation (Section 5.2)
   - [Source term](pde_source/right_hand_side_1d_demo.ipynb), RLRTO
   - [Boundary value](pde_boundary_value/boundary_value_demo.ipynb), RLRTO
   - [Conductivity](pde_myula/Poisson_2D_MYULA_short.ipynb), Langevin
-- [Image inpainting](inpainting/inpainting.ipynb), Langevin
+- [Image inpainting (Section 5.3)](inpainting/inpainting.ipynb), Langevin
