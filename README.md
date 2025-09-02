@@ -15,4 +15,6 @@ This repository contains supplementary materials to our manuscript.
   - [Source term](pde_source/right_hand_side_1d_demo.ipynb), RLRTO
   - [Boundary value](pde_boundary_value/boundary_value_demo.ipynb), RLRTO
   - [Conductivity](pde_myula/Poisson_2D_MYULA_short.ipynb), Langevin
-- [Image inpainting (Section 5.3)](inpainting/inpainting.ipynb), Langevin
+- Image inpainting (Section 5.3)
+  - [Wavelet denoiser](inpainting/inpainting_wavelet_ref.ipynb), Langevin
+  - [DnCNN denoiser](inpainting/inpainting.ipynb), Langevin
