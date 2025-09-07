@@ -1,5 +1,8 @@
 import numpy as np
 import cuqi
+import os
+from matplotlib import ticker
+import matplotlib.pyplot as plt
 
 def sample_in_batches(sampler, Ns, Nt, A):
 
@@ -20,10 +23,6 @@ def sample_in_batches(sampler, Ns, Nt, A):
 
 def plot_figure_12(kappa_true, y_true, y_obs, posterior_samples, line_samples, exact_line, xx):
 
-    import os
-    from matplotlib import ticker
-    import matplotlib.pyplot as plt
-    
     # Set up matplotlib
     SMALL_SIZE = 7
     MEDIUM_SIZE = 8
@@ -35,7 +34,7 @@ def plot_figure_12(kappa_true, y_true, y_obs, posterior_samples, line_samples, e
     plt.rc('ytick', labelsize=SMALL_SIZE)    # fontsize of the tick labels
     plt.rc('legend', fontsize=SMALL_SIZE)    # legend fontsize
     plt.rc('figure', titlesize=BIGGER_SIZE)  # fontsize of the figure title
-    
+
     # Use latex package
     plt.rc('text', usetex=True)
     plt.rc('text.latex', preamble=r'\usepackage{bm}')
@@ -60,11 +59,11 @@ def plot_figure_12(kappa_true, y_true, y_obs, posterior_samples, line_samples, e
     plt.gca().yaxis.labelpad = -5
     plt.xlabel('$x_1$')
     plt.gca().xaxis.labelpad =  2
-    
+
     # (b)
     plt.sca(axs[0,1])
     im = y_true.plot(subplots=False)
-    
+
     inset_axes = plt.gca().inset_axes([1.04, 0.2, 0.05, 0.6])
     fig.colorbar(im[0], ax=plt.gca(), cax=inset_axes)
     plt.ylabel('$x_2$')
@@ -75,8 +74,8 @@ def plot_figure_12(kappa_true, y_true, y_obs, posterior_samples, line_samples, e
 
     plt.xlabel('$x_1$')
     plt.gca().xaxis.labelpad =  2# -5 -5
-    
-    
+
+
     # (c)
     plt.sca(axs[0,2])
 
@@ -90,7 +89,7 @@ def plot_figure_12(kappa_true, y_true, y_obs, posterior_samples, line_samples, e
     plt.xlabel('$x_1$')
     plt.gca().xaxis.labelpad =  2# -5 -5
     plt.gca().set_title('(c) Noisy data')
-    
+
     # (d)
     plt.sca(axs[1,0])
     im = posterior_samples.plot_mean(
@@ -101,11 +100,11 @@ def plot_figure_12(kappa_true, y_true, y_obs, posterior_samples, line_samples, e
     plt.ylabel('$x_1$')
     plt.gca().yaxis.labelpad = -5
     plt.gca().set_xlim(0, 1)
-    
+
     plt.xlabel('$x_1$')
     plt.gca().xaxis.labelpad =  2# -5 -5
     plt.gca().set_title('(d) Posterior mean')
-    
+
     # (e)
     plt.sca(axs[1,1])
     im = posterior_samples.funvals.vector.plot_std(subplots=False)
@@ -118,10 +117,10 @@ def plot_figure_12(kappa_true, y_true, y_obs, posterior_samples, line_samples, e
     plt.xlabel('$x_1$')
     plt.gca().xaxis.labelpad = 2# -5
     plt.gca().set_title('(e) Posterior STD')
-    
+
     # (f)
     plt.sca(axs[1,2])
-    
+
     line_samples_obj = cuqi.samples.Samples(line_samples.T, geometry=cuqi.geometry.Continuous1D(xx))
     lines = line_samples_obj.plot_ci( exact=exact_line)
     plt.legend(ncol=2, frameon=False, loc=2)
