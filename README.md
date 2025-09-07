@@ -14,7 +14,7 @@ This repository contains supplementary materials to our manuscript.
 - Various inverse problems with the Poisson equation (Section 5.2)
   - [Source term](pde_source/right_hand_side_1d_demo.ipynb), RLRTO
   - [Boundary value](pde_boundary_value/boundary_value_demo.ipynb), RLRTO
-  - [Conductivity](pde_myula/Poisson_2D_MYULA_short.ipynb), Langevin
+  - [Conductivity](pde_myula/Poisson_2D_MYULA_Part1.ipynb) together with [comparing different TV regularization strength](pde_myula/Poisson_2D_MYULA_Part2.ipynb), Langevin
 - Image inpainting (Section 5.3)
   - [Wavelet denoiser](inpainting/inpainting_wavelet_ref.ipynb), Langevin
   - [DnCNN denoiser](inpainting/inpainting.ipynb), Langevin
