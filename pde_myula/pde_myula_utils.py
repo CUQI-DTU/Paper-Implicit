@@ -53,8 +53,7 @@ def plot_figure_12(kappa_true, y_true, y_obs, posterior_samples, line_samples, e
     fig.colorbar(im[0], ax=plt.gca(), cax=inset_axes)
     plt.gca().set_ylim(0, 1)
     plt.gca().set_xlim(0, 1)
-
-    plt.gca().set_title('(a) Exact solution')
+    plt.gca().set_title('(a) '+'$\\bm{\kappa}_\mathrm{true}$')
     plt.ylabel('$x_2$')
     plt.gca().yaxis.labelpad = -5
     plt.xlabel('$x_1$')
@@ -68,7 +67,7 @@ def plot_figure_12(kappa_true, y_true, y_obs, posterior_samples, line_samples, e
     fig.colorbar(im[0], ax=plt.gca(), cax=inset_axes)
     plt.ylabel('$x_2$')
     plt.gca().yaxis.labelpad = -5
-    plt.gca().set_title('(b) Exact data')
+    plt.gca().set_title('(b) '+'$\\bm{u}_\mathrm{exact}$')
     # control number of ticks of the colorbar
     inset_axes.yaxis.set_major_locator(ticker.MaxNLocator(nbins=4))
 
@@ -88,7 +87,7 @@ def plot_figure_12(kappa_true, y_true, y_obs, posterior_samples, line_samples, e
     inset_axes.yaxis.set_major_locator(ticker.MaxNLocator(nbins=4))
     plt.xlabel('$x_1$')
     plt.gca().xaxis.labelpad =  2# -5 -5
-    plt.gca().set_title('(c) Noisy data')
+    plt.gca().set_title('(c) '+'$\\bm{y}_\mathrm{obs}$')
 
     # (d)
     plt.sca(axs[1,0])
@@ -116,7 +115,7 @@ def plot_figure_12(kappa_true, y_true, y_obs, posterior_samples, line_samples, e
     plt.gca().yaxis.labelpad = -5
     plt.xlabel('$x_1$')
     plt.gca().xaxis.labelpad = 2# -5
-    plt.gca().set_title('(e) Posterior STD')
+    plt.gca().set_title('(e) Posterior standard deviation')
 
     # (f)
     plt.sca(axs[1,2])
@@ -128,7 +127,7 @@ def plot_figure_12(kappa_true, y_true, y_obs, posterior_samples, line_samples, e
     plt.ylim([-1, 0.5])
     plt.xlabel('$x_1$')
     plt.gca().xaxis.labelpad = 2# -5
-    plt.gca().set_title('(f) Posterior CI')
+    plt.gca().set_title('(f) Posterior at $x_2=0.5$')
     plt.gca().set_box_aspect(1)
 
 
