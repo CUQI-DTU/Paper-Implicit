@@ -144,3 +144,127 @@ def get_samples_at_line(posterior_samples, xx, yy):
 
     line_samples = np.array(line_samples)
     return line_samples
+
+
+def plot_figure_13(data_list, rest_strength_factor):
+
+    # Set up matplotlib
+    SMALL_SIZE = 7
+    MEDIUM_SIZE = 8
+    BIGGER_SIZE = 9
+    plt.rc('font', size=MEDIUM_SIZE)          # controls default text sizes
+    plt.rc('axes', titlesize=BIGGER_SIZE)     # fontsize of the axes title
+    plt.rc('axes', labelsize=MEDIUM_SIZE)    # fontsize of the x and y labels
+    plt.rc('xtick', labelsize=SMALL_SIZE)    # fontsize of the tick labels
+    plt.rc('ytick', labelsize=SMALL_SIZE)    # fontsize of the tick labels
+    plt.rc('legend', fontsize=SMALL_SIZE)    # legend fontsize
+    plt.rc('figure', titlesize=BIGGER_SIZE)  # fontsize of the figure title
+    
+    # Use latex package
+    plt.rc('text', usetex=True)
+    plt.rc('text.latex', preamble=r'\usepackage{bm}')
+    
+    # Create the figure
+    cm_to_in = 1/2.54
+    fig, axs = plt.subplots(nrows=2, ncols=3,
+                            figsize=(17.8*cm_to_in, 9.8*cm_to_in),
+                            layout="constrained")
+    
+    # Define the colors to be used in the plots
+    colors = ['C0', 'green', 'purple', 'k', 'gray']
+    
+    # (a)
+    plt.sca(axs[0,0])
+
+    im = data_list[0].plot_mean(
+        subplots=False, vmin=-0.55, vmax=0.02, mode='color')
+    inset_axes = plt.gca().inset_axes([1.04, 0.2, 0.05, 0.6])
+    fig.colorbar(im[0], ax=plt.gca(), cax=inset_axes)
+    plt.gca().set_ylim(0, 1)
+    plt.ylabel('$x_2$')
+    plt.gca().yaxis.labelpad = -5
+
+    plt.gca().set_xlim(0, 1)
+    plt.xlabel('$x_1$')
+    plt.gca().xaxis.labelpad = 1
+    plt.gca().set_title('(a) '+'$\omega='+str(rest_strength_factor[0])+'$')
+
+    # (b)
+    plt.sca(axs[0,1])
+
+    im = data_list[1].plot_mean(
+        subplots=False, vmin=-0.55, vmax=0.02, mode='color')
+    inset_axes = plt.gca().inset_axes([1.04, 0.2, 0.05, 0.6])
+    fig.colorbar(im[0], ax=plt.gca(), cax=inset_axes)
+    plt.gca().set_ylim(0, 1)
+    plt.ylabel('$x_2$')
+    plt.gca().yaxis.labelpad = -5
+
+    plt.gca().set_xlim(0, 1)
+    plt.xlabel('$x_1$')
+    plt.gca().xaxis.labelpad = 1
+    plt.gca().set_title('(b) '+'$\omega='+str(rest_strength_factor[1])+'$')
+
+    # (c)
+    plt.sca(axs[0,2])
+
+    im = data_list[2].plot_mean(
+        subplots=False, vmin=-0.55, vmax=0.02, mode='color')
+    inset_axes = plt.gca().inset_axes([1.04, 0.2, 0.05, 0.6])
+    fig.colorbar(im[0], ax=plt.gca(), cax=inset_axes)
+    plt.gca().set_ylim(0, 1)
+    plt.ylabel('$x_2$')
+    plt.gca().yaxis.labelpad = -5
+ 
+    plt.gca().set_xlim(0, 1)
+    plt.xlabel('$x_1$')
+    plt.gca().xaxis.labelpad = 1
+    plt.gca().set_title('(c) '+'$\omega='+str(rest_strength_factor[2])+'$')
+
+    # (d)
+    plt.sca(axs[1,0])
+
+    im = data_list[3].plot_mean(
+        subplots=False, vmin=-0.55, vmax=0.02, mode='color')
+    inset_axes = plt.gca().inset_axes([1.04, 0.2, 0.05, 0.6])
+    fig.colorbar(im[0], ax=plt.gca(), cax=inset_axes)
+    plt.gca().set_ylim(0, 1)
+    plt.ylabel('$x_2$')
+    plt.gca().yaxis.labelpad = -5
+    
+    plt.gca().set_xlim(0, 1)
+    plt.xlabel('$x_1$')
+    plt.gca().xaxis.labelpad = 1
+    plt.gca().set_title('(d) '+'$\omega='+str(rest_strength_factor[3])+'$')
+
+    # (e)
+    plt.sca(axs[1,1])
+
+    im = data_list[4].plot_mean(
+        subplots=False, vmin=-0.55, vmax=0.02, mode='color')
+    inset_axes = plt.gca().inset_axes([1.04, 0.2, 0.05, 0.6])
+    fig.colorbar(im[0], ax=plt.gca(), cax=inset_axes)
+    plt.gca().set_ylim(0, 1)
+    plt.ylabel('$x_2$')
+    plt.gca().yaxis.labelpad = -5
+    
+    plt.gca().set_xlim(0, 1)
+    plt.xlabel('$x_1$')
+    plt.gca().xaxis.labelpad = 1
+    plt.gca().set_title('(e) '+'$\omega='+str(rest_strength_factor[4])+'$')
+
+    # (f)
+    plt.sca(axs[1,2])
+
+    im = data_list[5].plot_mean(
+        subplots=False, vmin=-0.55, vmax=0.02, mode='color')
+    inset_axes = plt.gca().inset_axes([1.04, 0.2, 0.05, 0.6])
+    fig.colorbar(im[0], ax=plt.gca(), cax=inset_axes)
+    plt.gca().set_ylim(0, 1)
+    plt.ylabel('$x_2$')
+    plt.gca().yaxis.labelpad = -5
+    
+    plt.gca().set_xlim(0, 1)
+    plt.xlabel('$x_1$')
+    plt.gca().xaxis.labelpad = 1
+    plt.gca().set_title('(f) '+'$\omega='+str(rest_strength_factor[5])+'$')
