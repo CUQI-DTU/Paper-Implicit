@@ -96,7 +96,7 @@ def plot_figure_12(kappa_true, y_true, y_obs, posterior_samples, line_samples, e
     inset_axes = plt.gca().inset_axes([1.04, 0.2, 0.05, 0.6])
     fig.colorbar(im[0], ax=plt.gca(), cax=inset_axes)
     plt.gca().set_ylim(0, 1)
-    plt.ylabel('$x_1$')
+    plt.ylabel('$x_2$')
     plt.gca().yaxis.labelpad = -5
     plt.gca().set_xlim(0, 1)
 
