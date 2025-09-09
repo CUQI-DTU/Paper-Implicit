@@ -10,7 +10,7 @@ This repository contains supplementary materials to our manuscript.
 - [Simplest nonlinear Bayesian inverse problem (Section 4.5)](simplest_nonlinear/simplest_nonlinear.ipynb), Langevin
 
 ### Application case studies
-- [Deblurring with constraints (Section 5.1)](showcase_regularizedGaussian/showcase_regGauss.ipynb), RLRTO
+- [Deblurring with constraints (Section 5.1)](deblurring/staircase.ipynb), RLRTO
 - Various inverse problems with the Poisson equation (Section 5.2)
   - [Source term](pde_source/right_hand_side_1d_demo.ipynb), RLRTO
   - [Boundary value](pde_boundary_value/boundary_value_demo.ipynb), RLRTO
