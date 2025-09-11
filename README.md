@@ -17,4 +17,4 @@ This repository contains supplementary materials to our manuscript.
   - [Conductivity](pde_myula/Poisson_2D_MYULA_Part1.ipynb) together with [comparing different TV regularization strength](pde_myula/Poisson_2D_MYULA_Part2.ipynb), Langevin
 - Image inpainting (Section 5.3)
   - [Wavelet denoiser](inpainting/inpainting_wavelet.ipynb), Langevin
-  - [DnCNN denoiser](inpainting/inpainting.ipynb), Langevin
+  - [DnCNN denoiser](inpainting/inpainting_DnCNN.ipynb), Langevin
