@@ -18,3 +18,12 @@ This repository contains supplementary materials to our manuscript.
 - Image inpainting (Section 5.3)
   - [Wavelet denoiser](inpainting/inpainting_wavelet.ipynb), Langevin
   - [DnCNN denoiser](inpainting/inpainting_DnCNN.ipynb), Langevin
+
+## Environment
+
+Core libraries being used and their respective versions:
+- [CUQIpy](https://github.com/CUQI-DTU/CUQIpy) 1.3.0
+- [CUQIpy-FEniCS](https://github.com/CUQI-DTU/CUQIpy-FEniCS) 0.8.0
+- [Scikit-image](https://github.com/scikit-image/scikit-image) 0.23.2
+- [Deepinverse](https://github.com/deepinv/deepinv) 0.3.0
+- [FEniCS](https://anaconda.org/conda-forge/fenics) 2019
