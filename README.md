@@ -12,8 +12,8 @@ This repository contains supplementary materials to our manuscript.
 ### Application case studies
 - [Deblurring with constraints (Section 5.1)](deblurring/staircase.ipynb), RLRTO
 - Various inverse problems with the Poisson equation (Section 5.2)
-  - [Source term](pde_source/right_hand_side_1d_demo.ipynb), RLRTO
-  - [Boundary value](pde_boundary_value/boundary_value_demo.ipynb), RLRTO
+  - [Source term 1](pde_source/source_1d_03.ipynb) [2](pde_source/source_1d_1.ipynb) [3](pde_source/source_1d_3.ipynb), RLRTO
+  - [Boundary value](pde_boundary_value/boundary_value_2d.ipynb), RLRTO
   - [Conductivity](pde_myula/Poisson_2D_MYULA_Part1.ipynb) together with [comparing different TV regularization strength](pde_myula/Poisson_2D_MYULA_Part2.ipynb), Langevin
 - Image inpainting (Section 5.3)
   - [Wavelet denoiser](inpainting/inpainting_wavelet_ref.ipynb), Langevin
