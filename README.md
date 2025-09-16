@@ -1,4 +1,4 @@
-# A computational framework and implementation for implicit priors in Bayesian inverse problems
+# A computational framework and implementation of implicit priors in Bayesian inverse problems
 
 #### [arXiv](https://arxiv.org/abs/2509.11781)
 
