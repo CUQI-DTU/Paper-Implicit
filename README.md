@@ -1,6 +1,6 @@
 # A computational framework and implementation for implicit priors in Bayesian inverse problems
 
-#### [arXiv to-be-filled](https://arxiv.org/abs/xxxx)
+#### [arXiv](https://arxiv.org/abs/2509.11781)
 
 This repository contains supplementary materials to our manuscript.
 
