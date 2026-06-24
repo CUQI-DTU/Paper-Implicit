@@ -21,7 +21,7 @@ def sample_in_batches(sampler, Ns, Nt, A):
 
     return posterior_samples
 
-def plot_figure_12(kappa_true, y_true, y_obs, posterior_samples, line_samples, exact_line, xx):
+def plot_figure_11(kappa_true, y_true, y_obs, posterior_samples, line_samples, exact_line, xx):
 
     # Set up matplotlib
     SMALL_SIZE = 7
