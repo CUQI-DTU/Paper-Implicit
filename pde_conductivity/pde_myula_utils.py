@@ -146,7 +146,7 @@ def get_samples_at_line(posterior_samples, xx, yy):
     return line_samples
 
 
-def plot_figure_13(data_list, rest_strength_factor, rel_errors_func):
+def plot_figure_12(data_list, rest_strength_factor, rel_errors_func):
 
     # Set up matplotlib
     SMALL_SIZE = 7
