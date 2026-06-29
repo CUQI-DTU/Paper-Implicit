@@ -21,7 +21,7 @@ def sample_in_batches(sampler, Ns, Nt, A):
 
     return posterior_samples
 
-def plot_figure_12(kappa_true, y_true, y_obs, posterior_samples, line_samples, exact_line, xx):
+def plot_figure_11(kappa_true, y_true, y_obs, posterior_samples, line_samples, exact_line, xx):
 
     # Set up matplotlib
     SMALL_SIZE = 7
@@ -146,7 +146,7 @@ def get_samples_at_line(posterior_samples, xx, yy):
     return line_samples
 
 
-def plot_figure_13(data_list, rest_strength_factor):
+def plot_figure_12(data_list, rest_strength_factor, rel_errors_func):
 
     # Set up matplotlib
     SMALL_SIZE = 7
@@ -187,7 +187,8 @@ def plot_figure_13(data_list, rest_strength_factor):
     plt.gca().set_xlim(0, 1)
     plt.xlabel('$x_1$')
     plt.gca().xaxis.labelpad = 1
-    plt.gca().set_title('(a) '+'$\omega='+str(rest_strength_factor[0])+'$')
+    plt.gca().set_title('(a) '+'$\omega='+str(rest_strength_factor[0])+'$'
+        + ', $\epsilon_\mathrm{rel}='+str(round(rel_errors_func[0]*100, 1))+'\\%$')
 
     # (b)
     plt.sca(axs[0,1])
@@ -203,7 +204,8 @@ def plot_figure_13(data_list, rest_strength_factor):
     plt.gca().set_xlim(0, 1)
     plt.xlabel('$x_1$')
     plt.gca().xaxis.labelpad = 1
-    plt.gca().set_title('(b) '+'$\omega='+str(rest_strength_factor[1])+'$')
+    plt.gca().set_title('(b) '+'$\omega='+str(rest_strength_factor[1])+'$'
+        + ', $\epsilon_\mathrm{rel}='+str(round(rel_errors_func[1]*100, 1))+'\\%$')
 
     # (c)
     plt.sca(axs[0,2])
@@ -219,7 +221,8 @@ def plot_figure_13(data_list, rest_strength_factor):
     plt.gca().set_xlim(0, 1)
     plt.xlabel('$x_1$')
     plt.gca().xaxis.labelpad = 1
-    plt.gca().set_title('(c) '+'$\omega='+str(rest_strength_factor[2])+'$')
+    plt.gca().set_title('(c) '+'$\omega='+str(rest_strength_factor[2])+'$'
+        + ', $\epsilon_\mathrm{rel}='+str(round(rel_errors_func[2]*100, 1))+'\\%$')
 
     # (d)
     plt.sca(axs[1,0])
@@ -235,7 +238,8 @@ def plot_figure_13(data_list, rest_strength_factor):
     plt.gca().set_xlim(0, 1)
     plt.xlabel('$x_1$')
     plt.gca().xaxis.labelpad = 1
-    plt.gca().set_title('(d) '+'$\omega='+str(rest_strength_factor[3])+'$')
+    plt.gca().set_title('(d) '+'$\omega='+str(rest_strength_factor[3])+'$'
+        + ', $\epsilon_\mathrm{rel}='+str(round(rel_errors_func[3]*100, 1))+'\\%$')
 
     # (e)
     plt.sca(axs[1,1])
@@ -251,7 +255,8 @@ def plot_figure_13(data_list, rest_strength_factor):
     plt.gca().set_xlim(0, 1)
     plt.xlabel('$x_1$')
     plt.gca().xaxis.labelpad = 1
-    plt.gca().set_title('(e) '+'$\omega='+str(rest_strength_factor[4])+'$')
+    plt.gca().set_title('(e) '+'$\omega='+str(rest_strength_factor[4])+'$'
+        + ', $\epsilon_\mathrm{rel}='+str(round(rel_errors_func[4]*100, 1))+'\\%$')
 
     # (f)
     plt.sca(axs[1,2])
@@ -267,4 +272,5 @@ def plot_figure_13(data_list, rest_strength_factor):
     plt.gca().set_xlim(0, 1)
     plt.xlabel('$x_1$')
     plt.gca().xaxis.labelpad = 1
-    plt.gca().set_title('(f) '+'$\omega='+str(rest_strength_factor[5])+'$')
+    plt.gca().set_title('(f) '+'$\omega='+str(rest_strength_factor[5])+'$'
+        + ', $\epsilon_\mathrm{rel}='+str(round(rel_errors_func[5]*100, 1))+'\\%$')
